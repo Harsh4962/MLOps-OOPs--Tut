@@ -1,11 +1,21 @@
 class chatbook:
+
+    __user_id = 0 #->hidden stat variable
+
     def __init__(self):
+        self.id = chatbook.__user_id  #-> self can access static so use "class_name.static_var_name"
+        chatbook.__user_id += 1
+        self.__name = "Default name"
         self.username = ''
         self.password = ''
         self.loggedin = False
-        self.menu()
+        # self.menu()
 
-
+    # getter and setter for hidden attributes
+    def get_name(self):
+        return self.__name
+    def set_name(self, val):
+        self.__name = val
 
     def menu(self):
         user_input = input(""" Welcome to chatbook !! How would you like to proceed ?
