@@ -8,3 +8,5 @@
     > code reusability
     > debugging
     > colab
+
+5. End-to-End project (chatbook)
